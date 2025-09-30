@@ -78,7 +78,7 @@ Se encuentran en la carpeta app/Models. Cada modelo representa una tabla de la b
 - Seeders y Factories
 Pueden utilizarse para poblar la base de datos con datos de prueba.
 
-# php artisan migrate
+#### php artisan migrate
 Ejecutar las migraciones y crear las tablas en la base de datos
 
 ## Instalación de dependencias y configuración del entorno
