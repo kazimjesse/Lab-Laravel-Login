@@ -49,13 +49,13 @@ De esta manera se busca:
 
 En este laboratorio se utilizó MySQL, el gestor de base de datos incluido en WAMP. Laravel permite la conexión a distintos motores de base de datos mediante el archivo .env, donde se configuran los parámetros de conexión.
 
-La configuracion del .env sobre la base de datos
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=lab2_login
-DB_USERNAME=root
-DB_PASSWORD=
+La configuracion del .env sobre la base de datos<br>
+DB_CONNECTION=mysql<br>
+DB_HOST=127.0.0.1<br>
+DB_PORT=3306<br>
+DB_DATABASE=lab2_login<br>
+DB_USERNAME=root<br>
+DB_PASSWORD=<br>
 
 ## Aspectos de Laravel en torno a la Base de Datos
 
@@ -81,14 +81,14 @@ Para la correcta ejecución del laboratorio, se realizaron los siguientes pasos:
 ### 1. Instalación de Laravel
 Se instaló el instalador de Laravel de forma global y posteriormente se creó el proyecto:
 
-composer global require laravel/installer
+composer global require laravel/installer<br>
 laravel new nombre_del_proyecto
 
 ### 2. Configuración del archivo .env
 Se ajustaron las variables de entorno relacionadas a la base de datos, servidor y claves de aplicación.
 Luego se limpiaron y cachearon las configuraciones:
 
-php artisan config:clear
+php artisan config:clear<br>
 php artisan config:cache
 
 ### 3. Migraciones de base de datos
@@ -99,14 +99,14 @@ php artisan migrate
 ### 4. Dependencias de autenticación en Laravel
 Se instalaron las dependencias necesarias para la autenticación con Laravel UI, configurando plantillas de autenticación con Bootstrap:
 
-composer require laravel/ui
-php artisan ui bootstrap
+composer require laravel/ui<br>
+php artisan ui bootstrap<br>
 php artisan ui bootstrap --auth
 
 ### 5. Configuración de frontend
 Se instalaron las dependencias de Node.js y se compiló el frontend con Vite:
 
-npm install
+npm install<br>
 npm run dev
 
 ### 6. Levantamiento del servidor local
@@ -115,25 +115,25 @@ Finalmente, se levantó el servidor de desarrollo de Laravel:
 php artisan serve
 
 ## Dificultades encontrada y soluciones
-Aquí tienes el texto con las correcciones gramaticales, de estilo y de puntuación para mejorar la claridad y formalidad del informe:
-•	Dificultad 1: Error de Certificados SSL. El principal problema fue un error con el SSL y los certificados de seguridad, manifestado como: "In CurlDownloader.php line 390: curl error 60 while downloading https://repo.packagist.org/packages.json: SSL certificate problem: unable to get local issuer certificate". Este error indicaba que no se reconocía el archivo cacert.pem, el cual contiene los certificados.
-o	Solución: Inicialmente, se intentó solucionar el problema descargando el archivo cacert.pem y modificando las líneas openssl.cafile y curl.cainfo en el archivo php.ini para incluir la dirección correcta del certificado. Dado que esta acción no resolvió el problema, la solución final fue desactivar el antivirus por completo.
-•	Dificultad 2: Configuración de la Base de Datos. En un inicio, la base de datos no se generaba al ejecutar el comando php artisan migrate. Esto se debió a que la configuración de la base de datos en el archivo .env estaba comentada y, por defecto, el framework utilizaba SQLite.
+Aquí tienes el texto con las correcciones gramaticales, de estilo y de puntuación para mejorar la claridad y formalidad del informe:<br>
+•	Dificultad 1: Error de Certificados SSL. El principal problema fue un error con el SSL y los certificados de seguridad, manifestado como:"In CurlDownloader.php line 390: curl error 60 while downloading https://repo.packagist.org/packages.json: SSL certificate problem: unable to get local issuer certificate". Este error indicaba que no se reconocía el archivo cacert.pem, el cual contiene los certificados.<br>
+o	Solución: Inicialmente, se intentó solucionar el problema descargando el archivo cacert.pem y modificando las líneas openssl.cafile y curl.cainfo en el archivo php.ini para incluir la dirección correcta del certificado. Dado que esta acción no resolvió el problema, la solución final fue desactivar el antivirus por completo.<br>
+•	Dificultad 2: Configuración de la Base de Datos. En un inicio, la base de datos no se generaba al ejecutar el comando php artisan migrate. Esto se debió a que la configuración de la base de datos en el archivo .env estaba comentada y, por defecto, el framework utilizaba SQLite.<br>
 o	Solución: Se descomentó la configuración de la base de datos en el archivo .env y se cambió el motor predeterminado a MySQL.
 
 ## Referencias
 
-Video tutorial de la profesora Irina Fong: https://www.youtube.com/watch?v=GZMGyYNq3hE
-Video tutorial para resolver el problema con el SSL y certificaciones: https://www.youtube.com/watch?v=yzsokU5M6t0
+Video tutorial de la profesora Irina Fong: https://www.youtube.com/watch?v=GZMGyYNq3hE<br>
+Video tutorial para resolver el problema con el SSL y certificaciones: https://www.youtube.com/watch?v=yzsokU5M6t0<br>
 Video tutorial para subir la carpeta del laboratorio de visual studio a GitHub: https://www.youtube.com/watch?v=2hcjEB-Mn7M
 
 ## Footer
 
 Este laboratorio ha sido desarrollado por el estudiante de la Universidad Tecnológica de Panamá:
 
-Nombre: Kazim Jesse
-Correo: kazim.jesse@utp.ac.pa
-Curso: 1SF-131
-Instructor del Laboratorio: Irina Fong
-Fecha de Ejecucion del laboratorio: 30/9/2025
+Nombre: Kazim Jesse<br>
+Correo: kazim.jesse@utp.ac.pa<br>
+Curso: 1SF-131<br>
+Instructor del Laboratorio: Irina Fong<br>
+Fecha de Ejecucion del laboratorio: 30/9/2025<br>
 Fecha de Entrega establecida por el docente: 29/9/2025
